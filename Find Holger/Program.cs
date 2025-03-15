@@ -103,7 +103,7 @@ void PrintLine(List<char> liste, int width, bool color, int ci, int[] nums, bool
             Array.Reverse(linje);
             foreach (char ca in linje)
             {
-                PrintEven(ca, i, width, color, ci, farver, nums[1], nums[0], findA);
+                PrintChars(ca, i, width, color, ci, farver, nums[1], nums[0], findA);
                 i++;
             }
         }
@@ -111,7 +111,7 @@ void PrintLine(List<char> liste, int width, bool color, int ci, int[] nums, bool
         {
             foreach (char ca in linje)
             {
-                PrintOdd(ca, i, width, color, ci, farver, nums[1], nums[0], findA);
+                PrintChars(ca, i, width, color, ci, farver, nums[1], nums[0], findA);
                 i++;
             }
         }
@@ -134,22 +134,7 @@ void PrintArray(List<char> liste, int width, int ci, int speed = 300, bool color
     Console.SetCursorPosition(0, 0);
     Thread.Sleep(speed);
 }
-void PrintOdd(char ca, int i, int width, bool color, int ci, ConsoleColor[] farver, int centkol, int centrek, bool findA)
-{
-    int rek = i / width;
-    int kol = i % width;
-    if (color == true)
-    {
-        Console.ForegroundColor = farver[Math.Abs(i + ci) % farver.Length];
-    }
-    else if (findA == true)
-    {
-        int afstand = Math.Abs(rek - centrek) + Math.Abs(kol - centkol);
-        Console.ForegroundColor = farver[Math.Abs(afstand + ci) % farver.Length];
-    }
-    Console.Write(ca.ToString().PadLeft(3));
-}
-void PrintEven(char ca, int i, int width, bool color, int ci, ConsoleColor[] farver, int centkol, int centrek, bool findA)
+void PrintChars(char ca, int i, int width, bool color, int ci, ConsoleColor[] farver, int centkol, int centrek, bool findA)
 {
     int rek = i / width;
     int kol = i % width;
@@ -189,9 +174,6 @@ int GetMes(string text)
 
     return Convert.ToInt32(temp);
 }
-
-
-
 
 
 
