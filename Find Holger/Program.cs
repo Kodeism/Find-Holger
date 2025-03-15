@@ -207,7 +207,11 @@ int GetMes(string text)
 
 
 
-//PROGRAM
+//PROGRAM - Det virker meget godt på en 20x20 matrix og virker også relativt fint på en 40x40.
+//Det er primært matematikken der tager tid men jeg kender ik' til
+//nogen form for vektorisering af lister eller lignende i c# indu så jeg ved ik' helt hvordan jeg skal løse det.
+//Givet, der er sikkert en del der kan optimeres i koden uden at tale om vektorisering af noget.
+//Men lordet virker, så jeg er --> (: 
 Console.CursorVisible = false;
 int hight = GetMes("Indtast højte");
 int width = GetMes("Indtast bredde");
