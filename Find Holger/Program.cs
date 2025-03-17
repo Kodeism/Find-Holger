@@ -190,6 +190,7 @@ int GetMes(string text)
 
 
 //PROGRAM - Det virker meget godt på en 20x20 matrix og virker også relativt fint på en 40x40.
+//Har for mange parametre til mange af funktionerne. Men det virker! :)
 Console.CursorVisible = false;
 int hight = GetMes("Indtast højte");
 int width = GetMes("Indtast bredde");
